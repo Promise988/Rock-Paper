@@ -63,19 +63,19 @@ function game() {
 // game();
 
 const rock = document.querySelector(".rock");
-rock.addEventListener("click", () => {
+rock.addEventListener("mousedown", () => {
     player = "Rock";
     game();
 });
 
 const paper = document.querySelector(".paper");
-paper.addEventListener("click", () => {
+paper.addEventListener("mousedown", () => {
     player = "Paper";
     game();
 });
 
 const scissors = document.querySelector(".scissors");
-scissors.addEventListener("click", () => {
+scissors.addEventListener("mousedown", () => {
     player = "Scissors";
     game();
 });

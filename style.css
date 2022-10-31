@@ -1,0 +1,18 @@
+img {
+    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+}
+
+.main-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.writing-div {
+    display:flex;
+    justify-content: center;
+
+}

@@ -47,13 +47,37 @@ function playGame(playerSelection, computerSelection) {
     }
 }
 
+const writing = document.querySelector("#writing");
+const content = document.createElement("h1");
+// content.textContent = "Hello It's a test";
+// writing.appendChild(content);
 
 function game() {
-    for (let i = 0; i < 5; i++) {
-        player = prompt("Rock Paper Scissors?");
-        cpu = getComputerChoice();
-        console.log(playGame(player,cpu));
-    }
-    console.log(`Wins:${wins}  Losses:${losses}  Draws:${draw}`);
-}
-game()
+    // player = prompt("Rock Paper Scissors?");
+    cpu = getComputerChoice();
+    console.log(playGame(player,cpu));
+    // console.log(`Wins:${wins}  Losses:${losses}  Draws:${draw}`);
+    content.textContent = `Wins:${wins}  Losses:${losses}  Draws:${draw}`;
+    writing.appendChild(content);
+};
+// game();
+
+const rock = document.querySelector(".rock");
+rock.addEventListener("click", () => {
+    player = "Rock";
+    game();
+});
+
+const paper = document.querySelector(".paper");
+paper.addEventListener("click", () => {
+    player = "Paper";
+    game();
+});
+
+const scissors = document.querySelector(".scissors");
+scissors.addEventListener("click", () => {
+    player = "Scissors";
+    game();
+});
+
+
